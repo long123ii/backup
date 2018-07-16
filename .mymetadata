@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Nanshou"
+  id="myeclipse.1531707927496"
+  context-root="/Nanshou"
+  j2ee-spec="5.0"
+  archive="Nanshou.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

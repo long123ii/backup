@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#p1").click(function(){
+        	var user=$("#username").val();
+            var pass=$("#password").val();
+        	if(user==""){alert("用户名不能为空");$("#username").focus();return false;}
+            if(pass==""){alert("密码不能为空");$("#password").focus();return false;}
+            
+            
+            $.post("/Nanshou/login",
+            	    {
+            	        user:user,
+            	        password:pass
+            	    },function(){
+            	    alert("请确认你输入信息，户名："+user+"密码："+pass);
+            	     window.location.href="qa.html";});
+            	    
+            	   
+        });
+    });
+</script>
+</head>
+
+<body>
+<h2>登录答题系统</h2>
+
+<p>用户名：<input type="text" id="username"/></p>
+<p>密码:<input type="password" id="password"/></p>
+
+
+<button id="p1">登录</button>
+</body>
+</html>
